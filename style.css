@@ -1,0 +1,26 @@
+:root {
+  --scale: 1.1;
+  --transition-speed: 5s;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: -9998;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transition: all var(--transition-speed) ease-in-out;
+  -moz-transition: all var(--transition-speed) ease-in-out;
+  -ms-transition: all var(--transition-speed) ease-in-out;
+  -o-transition: all var(--transition-speed) ease-in-out;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.background.zoom {
+  transform: scale(var(--scale));
+}
